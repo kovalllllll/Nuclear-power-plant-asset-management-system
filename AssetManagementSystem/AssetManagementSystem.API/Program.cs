@@ -1,3 +1,5 @@
+using AssetManagementSystem.DAL;
+
 namespace AssetManagementSystem.API;
 
 public abstract class Program
@@ -9,15 +11,14 @@ public abstract class Program
         builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true,
             reloadOnChange: true);
 
-        // Add services to the container.
         builder.Services.AddAuthorization();
 
-        // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
+
+        builder.Services.AddDataAccessLayer();
 
         var app = builder.Build();
 
-        // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
             app.MapOpenApi();
