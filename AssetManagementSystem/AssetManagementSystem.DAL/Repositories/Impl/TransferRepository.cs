@@ -4,8 +4,8 @@ using AssetManagementSystem.DAL.Repositories.Interfaces;
 
 namespace AssetManagementSystem.DAL.Repositories.Impl;
 
-public class TransferRepositoryAsset(ApplicationDbContext dbContext)
-    : BaseRepositoryAsset<Transfer, Guid>(dbContext), ITransferRepository
+public class TransferRepository(ApplicationDbContext dbContext)
+    : BaseRepository<Transfer, Guid>(dbContext), ITransferRepository
 {
     private readonly ApplicationDbContext _dbContext = dbContext;
 

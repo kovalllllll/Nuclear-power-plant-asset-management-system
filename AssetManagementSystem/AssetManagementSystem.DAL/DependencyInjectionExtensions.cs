@@ -8,11 +8,11 @@ public static class DependencyInjectionExtensions
 {
     public static IServiceCollection AddDataAccessLayer(this IServiceCollection services)
     {
-        services.AddScoped<IAssetRepository, AssetRepositoryAsset>();
-        services.AddScoped<IInspectionRepository, InspectionRepositoryAsset>();
-        services.AddScoped<ITransferRepository, TransferRepositoryAsset>();
-        services.AddScoped<IReportRepository, ReportRepositoryAsset>();
-        services.AddScoped<IReportRepository, ReportRepositoryAsset>();
+        services.AddScoped<IAssetRepository, AssetRepository>();
+        services.AddScoped<IInspectionRepository, InspectionRepository>();
+        services.AddScoped<ITransferRepository, TransferRepository>();
+        services.AddScoped<IReportRepository, ReportRepository>();
+        services.AddScoped<IReportRepository, ReportRepository>();
 
         return services;
     }

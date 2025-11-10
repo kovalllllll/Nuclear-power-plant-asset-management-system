@@ -4,7 +4,7 @@ using AssetManagementSystem.DAL.Repositories.Interfaces;
 
 namespace AssetManagementSystem.DAL.Repositories.Impl;
 
-public class AssetRepositoryAsset(ApplicationDbContext dbContext) : BaseRepositoryAsset<Asset, Guid>(dbContext), IAssetRepository
+public class AssetRepository(ApplicationDbContext dbContext) : BaseRepository<Asset, Guid>(dbContext), IAssetRepository
 {
     private readonly ApplicationDbContext _dbContext = dbContext;
 

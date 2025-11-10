@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AssetManagementSystem.DAL.Repositories.Impl;
 
-public abstract class BaseRepositoryAsset<T, TId>(ApplicationDbContext dbContext) : IRepository<T, TId>
+public abstract class BaseRepository<T, TId>(ApplicationDbContext dbContext) : IRepository<T, TId>
     where T : class
 {
     private readonly DbSet<T> _dbSet = dbContext.Set<T>();

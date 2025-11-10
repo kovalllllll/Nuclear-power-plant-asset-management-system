@@ -3,8 +3,8 @@ using AssetManagementSystem.DAL.Repositories.Interfaces;
 
 namespace AssetManagementSystem.DAL.Repositories.Impl;
 
-public class InspectionRepositoryAsset(ApplicationDbContext dbContext)
-    : BaseRepositoryAsset<Inspection, Guid>(dbContext), IInspectionRepository
+public class InspectionRepository(ApplicationDbContext dbContext)
+    : BaseRepository<Inspection, Guid>(dbContext), IInspectionRepository
 {
     private readonly ApplicationDbContext _dbContext = dbContext;
 
