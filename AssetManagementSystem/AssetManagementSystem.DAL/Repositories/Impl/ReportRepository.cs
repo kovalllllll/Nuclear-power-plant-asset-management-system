@@ -4,8 +4,8 @@ using AssetManagementSystem.DAL.Repositories.Interfaces;
 
 namespace AssetManagementSystem.DAL.Repositories.Impl;
 
-public class ReportRepositoryAsset(ApplicationDbContext dbContext)
-    : BaseRepositoryAsset<Report, Guid>(dbContext), IReportRepository
+public class ReportRepository(ApplicationDbContext dbContext)
+    : BaseRepository<Report, Guid>(dbContext), IReportRepository
 {
     private readonly ApplicationDbContext _dbContext = dbContext;
 

@@ -11,10 +11,10 @@ public class UnitOfWork(ApplicationDbContext context) : IUnitOfWork
     private ITransferRepository? _transferRepository;
 
 
-    public IAssetRepository Assets => _assetRepository ??= new AssetRepositoryAsset(context);
-    public IInspectionRepository Inspections => _inspectionRepository ??= new InspectionRepositoryAsset(context);
-    public ITransferRepository Transfers => _transferRepository ??= new TransferRepositoryAsset(context);
-    public IReportRepository Reports => _reportRepository ??= new ReportRepositoryAsset(context);
+    public IAssetRepository Assets => _assetRepository ??= new AssetRepository(context);
+    public IInspectionRepository Inspections => _inspectionRepository ??= new InspectionRepository(context);
+    public ITransferRepository Transfers => _transferRepository ??= new TransferRepository(context);
+    public IReportRepository Reports => _reportRepository ??= new ReportRepository(context);
 
 
     public void SaveChanges()
