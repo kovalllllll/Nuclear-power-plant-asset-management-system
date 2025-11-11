@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Moq;
 
-namespace AssetManagementSystem.DAL.Tests;
+namespace AssetManagementSystem.DAL.Tests.Tests;
 
 public class UnitOfWorkTests
 {

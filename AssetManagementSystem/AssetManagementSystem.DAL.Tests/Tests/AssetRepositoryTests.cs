@@ -3,7 +3,7 @@ using AssetManagementSystem.DAL.Enums;
 using AssetManagementSystem.DAL.Excetions;
 using AssetManagementSystem.DAL.Repositories.Impl;
 
-namespace AssetManagementSystem.DAL.Tests;
+namespace AssetManagementSystem.DAL.Tests.Tests;
 
 public class AssetRepositoryTests
 {
