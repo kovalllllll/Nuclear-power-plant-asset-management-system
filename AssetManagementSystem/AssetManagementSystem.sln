@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagementSystem.DAL",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagementSystem.DAL.Tests", "AssetManagementSystem.DAL.Tests\AssetManagementSystem.DAL.Tests.csproj", "{C1B67317-7896-44FF-B968-3D00692A1D05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagementSystem.BLL.Test", "AssetManagementSystem.BLL.Test\AssetManagementSystem.BLL.Test.csproj", "{C0889A4A-AC7A-41E8-98AF-CB72A170B452}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,5 +37,9 @@ Global
 		{C1B67317-7896-44FF-B968-3D00692A1D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1B67317-7896-44FF-B968-3D00692A1D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1B67317-7896-44FF-B968-3D00692A1D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0889A4A-AC7A-41E8-98AF-CB72A170B452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0889A4A-AC7A-41E8-98AF-CB72A170B452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0889A4A-AC7A-41E8-98AF-CB72A170B452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0889A4A-AC7A-41E8-98AF-CB72A170B452}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
