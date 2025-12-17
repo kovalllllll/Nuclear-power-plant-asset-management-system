@@ -1,13 +1,22 @@
-﻿using AssetManagementSystem.DAL.Repositories.Impl;
+﻿using AssetManagementSystem.DAL.Entities;
+using AssetManagementSystem.DAL.Repositories.Impl;
 using AssetManagementSystem.DAL.Repositories.Interfaces;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AssetManagementSystem.DAL;
 
 public static class DependencyInjectionExtensions
 {
-    public static IServiceCollection AddDataAccessLayer(this IServiceCollection services)
+    public static IServiceCollection AddDataAccessLayer(this IServiceCollection services, IConfiguration configuration)
     {
+        services.AddDbContext<ApplicationDbContext>(options =>
+        {
+            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
+        });
+
         services.AddScoped<IAssetRepository, AssetRepository>();
         services.AddScoped<IInspectionRepository, InspectionRepository>();
         services.AddScoped<ITransferRepository, TransferRepository>();
